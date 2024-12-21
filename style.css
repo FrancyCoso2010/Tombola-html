@@ -1,0 +1,151 @@
+/* Stili base */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    min-height: 100vh;
+    background: url('imgs/background.jpg');
+}
+
+/* Contenitore principale */
+#container {
+    display: flex;
+    gap: 20px;
+    width: 80%; /* Adatta la larghezza massima del contenitore */
+}
+
+/* Tabella dei numeri */
+#tabella {
+    display: grid;
+    grid-template-columns: repeat(10, 70px);
+    grid-gap: 10px;
+    border: 1px solid #ccc;
+    background-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 16px;
+    margin: 0 auto;
+    height: 70%;
+}
+
+span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    background-color: #fff;
+    border: 2px solid #ccc;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+span:hover {
+    background-color: #eee;
+    transform: scale(1.05);
+}
+
+.found {
+    background-color: #f00;
+    color: #fff;
+}
+
+/* Controllo dei numeri estratti */
+#controls {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+}
+
+.extracted-number {
+    text-align: center;
+    font-size: 3rem;
+    color: #fff;
+    background-color: #f00;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    animation: zoomIn 0.5s ease-in-out;
+}
+
+button {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+.estrai-numero {
+    background-color: #4CAF50;
+    color: #fff;
+}
+
+.reset {
+    background-color: #f44336;
+    color: #fff;
+}
+
+.autorun {
+    background-color: #2196F3;
+    color: #fff;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+/* Animazione */
+@keyframes zoomIn {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+
+
+#combinazioni {
+    display: flex;
+    flex-direction: column;
+    margin-top: 60px;
+}
+
+.combinazione {
+    /* Stili base per i bottoni */
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+    background-color: #eee;
+}
+
+.active {
+    background-color: #4CAF50;
+    color: white;
+    transform: scale(1.2);
+}
+
+.founded{
+    background-color: rgb(117, 117, 117);
+    color: white;
+    text-decoration: line-through;
+    transform: scale(0.8);
+}
